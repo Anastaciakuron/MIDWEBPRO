@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="X-UA-Compatible" content="IE=EDGE">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="index.css">
+    <title>MID Project, Web Programming</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#">Student Management MiniApp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <h1>Student Management</h1>
+    <h1>MiniApp</h1>
+    <hr />
+    <section class="container">
+      <div class="frms">
+        <h3>Add Student</h3>
+        <button type="button" name="button-show">Show Form Add New Student</button>
+        <form class="form">
+          <div>
+            <label for="id">student ID(NIM)</label>
+            <input type="text" name="id" placeholder="105011910062" required>
+          </div>
+
+          <div>
+            <label for="fullname">full Name</label>
+            <input type="text" name="fullname" placeholder="Anastacia kuron" required>
+          </div>
+
+          <div class="gender">
+            <label for="gender">gender</label>
+            <div>
+              <input class="male" type="radio" name="gender" value="male">
+              <input class="female" type="radio" name="gender" value="female">
+            </div>
+          </div>
+
+          <div>
+            <label for="faculty">faculty</label>
+            <select id="faculties" name="faculty">
+              <option value="all">--SELECT FACULTY--</option>
+              <option value="Pascasarjana">Pascasarjana</option>
+              <option value="FFIL">fakultas Filsafat</option>
+              <option value="FKIP">fakultas Keguruan dan Ilmu Pendidikan</option>
+              <option value="FEB">fakultas Ekonomi dan Bisnis</option>
+              <option value="pertanian">fakultas Pertanian</option>
+              <option value="FIK">fakultas Ilmu Komputer</option>
+              <option value="FKEP">fakultas Keperawatan</option>
+              <option value="sekretari">Akademi sekretari Manajemen Indonesia Klabat</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="programs">program of study</label>
+            <select id="programs" name="programs">
+              <option class="all" value="all" id="options">--SELECT PROGRAM OF STUDY--</option>
+            </select>
+          </div>
+
+          <button type="submit">Add Student</button>
+        </form>
+      </div>
+
+      <div class="filters">
+        <h1>filter students by</h1>
+        <form id="form2">
+          <label>faculty</label>
+          <select class="fil-faculty" name="fil-faculty">
+            <option value="all">--SELECT FACULTY--</option>
+            <option value="Pascasarjana">Pascasarjana</option>
+            <option value="FFIL">FFIL</option>
+            <option value="FKIP">FKIP</option>
+            <option value="FEB">FEB</option>
+            <option value="pertanian">pertanian</option>
+            <option value="FIK">FIK</option>
+            <option value="FKEP">FKEP</option>
+            <option value="sekretari">sekretari</option>
+          </select>
+          <label>program of study</label>
+          <select class="fil-programs" name="fil-programs">
+            <option value="all">--SELECT PROGRAM OF STUDY--</option>
+            <option value="Mmanajemen">Magister Manajemen</option>
+            <option value="Mteologi">Magister Teologi</option>
+            <option value="ilmu filsafat">Ilmu Filsafat</option>
+            <option value="PendidikanAg">Pendidikan Agama</option>
+            <option value="PendidikanBI">Pendidikan Bahasa Inggris</option>
+            <option value="PendidikanEk">Pendidikan Ekonomi</option>
+            <option value="PendidikanLS">Pendidikan Luar Sekolah</option>
+            <option value="Akun">Akutansi</option>
+            <option value="Manajemen">Manajemen</option>
+            <option value="Agro">Agroteknologi</option>
+            <option value="TI">Informatika</option>
+            <option value="SI">Sistem Informasi</option>
+            <option value="Ners">Profesi Ners</option>
+            <option value="Nursing">Keperawatan</option>
+            <option value="Sekretari">Sekretari (D3)</option>
+          </select>
+        </form>
+      </div>
+    </section>
+
+    <section class="students-datas">
+      <h1>Our Student</h1>
+      <input type="text" name="searchbar" class="options" value="" placeholder="search student by name....">
+      <table>
+        <tbody>
+          <th>student id(NIM)</th>
+          <th>full Name</th>
+          <th>Gender</th>
+          <th>Faculty</th>
+          <th>Program of Study</th>
+          <th>Action</th>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>  
+      <span>&#169; 2021 Copyright: Anastacia kuron. </span>
+    </footer>
+  <script src="script.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
